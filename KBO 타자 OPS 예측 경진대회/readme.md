@@ -26,7 +26,7 @@ ${data}
 
 ### 프로젝트 구조
 ---
-프로젝트 구조
+```
 ${PROJECT}
 ├── results/
 ├── data/
@@ -37,3 +37,4 @@ ${PROJECT}
 ├── EDA.ipynb
 ├── preprocessing.ipynb
 └── Model.ipynb
+```
