@@ -6,6 +6,7 @@
 ### 목적
 ---
 - 2019년 타자들의 상반기 OPS를 예측하는 모델 개발
+- 현재 2023년 이기에 2000년부터 2022년까지의 데이터를 수집하여 데이터를 최신화 하였음
 
 ### 데이터 
 ---
@@ -38,3 +39,52 @@ ${PROJECT}
 ├── preprocessing.ipynb
 └── Model.ipynb
 ```
+
+### 데이터 분석
+
+- - -
+
+- OPS(종속변수)를 제외하고 25개의 독립변수가 존재
+
+- 야구 선수를 평가할 때 가장 많이 사용하는 WAR(대체 선수 대비 승리 기여도)지표와 BABIP(Batting Average on Balls In Play)이라는 파생변수가 중요할 것이라 판단
+  - BABIP이라는 파생변수 생성
+    - ![image](https://user-images.githubusercontent.com/110336043/223058799-2641ca71-0857-442e-b945-6e8bd0a68f04.png)
+
+- 다중공선성 문제 해결
+   - 야구 데이터의 특성상 다중 공선성이 발생
+     - 예) 타율 = (안타+2루타+3루타+홈런) / 타수
+     - 예시 처럼 많은 데이터들이 각 데이터 간의 조합을 통하여 데이터가 추가 평가지표가 된다.
+     
+  1. 랜덤포레스트의 feature_importance를 통한 변수 선택
+      - 특성 중요도를 통하여 특성 중요도가 높은 변수들을 선택하여 다시 모델링을 진행
+  2. PCA를 통한 차원축소
+      - PCA기법을 통하여 데이터를 축소시켜 다중공선성 문제를 해결
+
+- OPS와 상관성이 높은 woBA와 WRC+그리고 장타가 상관계수가 0.9이상으로 나타난다.
+
+  - wOBA(Weighted On-Base Average, 가중 출루율)는 야구에서 쓰이는 통계 지표로서, 타자의 타석당 득점 기여도를 출루율 스케일로 표현한다
+  - Weighted Runs Created의 줄임말로 조정 득점 창출력을 말한다. 뒤에 +가 붙은 건 파크팩터 등을 추가로 반영했다는 의미다.
+
+- 이상치 존재
+  - 2022년 KBO기준으로 타율이 가장 높은 타자는 82년도 백인천(0.412)선수 인데 규정 타석을 다 채우지 않은 데이터까지 존재하여 이상치 존재
+  - ![image](https://user-images.githubusercontent.com/110336043/223059976-b11893d6-7405-40ca-8118-b7bded73405b.png)
+  
+  - 이상치 제거 후
+  - ![image](https://user-images.githubusercontent.com/110336043/223060183-91c81276-cbf9-4122-a47b-5d63b9f50080.png)
+
+- WAR 범주화
+  - WAR
+    > <span style="color: Grey">Decision of player’s value via WAR (fangraph)</span>
+  - ![image](https://user-images.githubusercontent.com/110336043/223062090-ce868fba-b061-4376-8d2c-22d362d681c5.png)
+  
+  - 위의 기준을 통하여 WAR을 범주화
+  - 6이상의 선수는 MVP급 활약을 한 선수, 5\~6 사이의 선수는 Superstar, 4\~5 사이의 선수는 All-star급 활약을 한 선수등 WAR을 수치 자체가아닌 위와 같이 세분화 하여 이산형 자료로 사용하는 것이 더 적절하다고 판단하였음
+
+- 사용 모델
+
+  -
+  
+### 피드백 및 추가 개선 사항
+
+- 
+
