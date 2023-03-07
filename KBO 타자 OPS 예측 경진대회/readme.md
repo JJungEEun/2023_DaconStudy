@@ -87,6 +87,23 @@ ${PROJECT}
   
 ### 피드백 및 추가 개선 사항
 
-- 변수선택법 중 전진 선택법 및 후진 제거법 적용 후 비교
+- 변수선택법 후진 제거법 적용 후 비교
+  - 적용 전 AIC
+    - ![image](https://user-images.githubusercontent.com/110336043/223401422-d5b5e188-b772-4e79-958e-19b5c06dea00.png)
+  - 적용 후 AIC
+    - ![image](https://user-images.githubusercontent.com/110336043/223401512-97008b5b-c7be-4520-93b5-8d9a1831752e.png)
+    
+    - 후진 제거법을 통하여 변수 선택을 한 결과 AIC가 감소하는 것을 확인 할 수 있다.
+    - 선택된 변수 : 타점, 도실, 출루, 장타
+    - OPS와 연관성이 깊은 출루와 장타라는 변수가 선택된 것을 확인할 수 있다.
+
+
 - 시각화를 통하여 실제 선수들의 OPS와 얼마나 차이가 나는지 비교
+  - ![image](https://user-images.githubusercontent.com/110336043/223401615-8374d2a6-c2b1-4597-9b54-4f982ebdc4f8.png)
+
+  - ![image](https://user-images.githubusercontent.com/110336043/223401585-35f7aba0-d781-4177-9b45-4b7393c14768.png)
+  
+  -![image](https://user-images.githubusercontent.com/110336043/223401740-c494d553-9709-4b5e-ad9a-7fced489c761.png)
+  
+  - 실제 2022년도의 OPS와 비교했을 때 거의 차이가 안나고 유사하게 그래프가 형성되는 것을 확인 할 수 있다.
 
