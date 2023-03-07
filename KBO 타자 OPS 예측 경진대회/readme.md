@@ -103,7 +103,7 @@ ${PROJECT}
 
   - ![image](https://user-images.githubusercontent.com/110336043/223401585-35f7aba0-d781-4177-9b45-4b7393c14768.png)
   
-  -![image](https://user-images.githubusercontent.com/110336043/223401740-c494d553-9709-4b5e-ad9a-7fced489c761.png)
+  - ![image](https://user-images.githubusercontent.com/110336043/223401740-c494d553-9709-4b5e-ad9a-7fced489c761.png)
   
   - 실제 2022년도의 OPS와 비교했을 때 거의 차이가 안나고 유사하게 그래프가 형성되는 것을 확인 할 수 있다.
 
