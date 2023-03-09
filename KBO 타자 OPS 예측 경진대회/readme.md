@@ -82,8 +82,8 @@ ${PROJECT}
 
 - 사용 모델
 
-  - PCA(주성분 분석)
-  - ARDRegression : 
+  - PCA(주성분 분석): https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
+  - ARDRegression : https://scikit-learn.org/0.17/auto_examples/linear_model/plot_ard.html
   
 ### 피드백 및 추가 개선 사항
 
