@@ -12,11 +12,13 @@
 
 ### 스터디 일정
 ---
-- [KBO 타자 OPS 예측 경진대회](https://dacon.io/competitions/official/62540/overview/description)
+- [KBO 타자 OPS 예측 경진대회](https://github.com/JJungEEun/2023_DaconStudy/tree/main/KBO%20%ED%83%80%EC%9E%90%20OPS%20%EC%98%88%EC%B8%A1%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C#%ED%94%BC%EB%93%9C%EB%B0%B1-%EB%B0%8F-%EC%B6%94%EA%B0%80-%EA%B0%9C%EC%84%A0-%EC%82%AC%ED%95%AD)
 
 |회차|날짜|내용|자료|비고|
 |---|---|---|---|---|
 |1회차|23-02-20|EDA 발표 및 방향설정|-|-|
+|2회차|23-02-28|크롤링 및 모델링|-|-|
+|3회차|23-03-08|변수선택법 및 모델 시각화, 코드 정리|-|-|
 
  
 ### 스터디 구성원
